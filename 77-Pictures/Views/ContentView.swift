@@ -18,7 +18,26 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(vm.savedPictures) { picture in
-                    Text(picture.notoptName)
+                    NavigationLink {
+                        DetailView(picture: picture)
+                    } label: {
+                        VStack(alignment: .leading) {
+                            HStack {
+                                if let imageToLoad = loadImage(fileName: picture.notoptImage) {
+                                    Image(uiImage: imageToLoad)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 48, height: 48)
+                                } else {
+                                    Image(systemName: "person")
+                                }
+                                Text(picture.notoptName)
+                            }
+                            Text(picture.notoptImage)
+                                .font(.caption2)
+                        }
+                    }
+
                 }
                 .onDelete(perform: vm.deletePictureFromEntity)
                 .listStyle(.plain)
@@ -30,7 +49,6 @@ struct ContentView: View {
                 } label: {
                     Image(systemName: "plus")
                 }
-
             }
             .sheet(isPresented: $showingAddItem) {
                 AddView(vm: vm)

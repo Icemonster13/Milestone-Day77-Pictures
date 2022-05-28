@@ -41,12 +41,14 @@ class CoreDataViewModel: ObservableObject {
         }
     }
     
-    func addPictureToEntity(name: String, imagePath: String) {
+    func addPictureToEntity(name: String, imagePath: String, latitude: Double, longitude: Double) {
         
         let newPicture = PictureEntity(context: container.viewContext)
         newPicture.id = UUID()
         newPicture.name = name
         newPicture.imagepath = imagePath
+        newPicture.latitude = latitude
+        newPicture.longitude = longitude
         saveData()
     }
     

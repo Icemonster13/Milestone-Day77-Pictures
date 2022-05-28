@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 extension PictureEntity {
     
@@ -15,6 +16,10 @@ extension PictureEntity {
     }
     
     var notoptImage: String {
-        name ?? "No image"
+        imagepath ?? "No image"
+    }
+    
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 }

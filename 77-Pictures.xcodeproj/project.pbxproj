@@ -17,6 +17,10 @@
 		C3E0C8AF2840DDED007ED348 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E0C8AE2840DDED007ED348 /* AddView.swift */; };
 		C3E0C8B12840DE84007ED348 /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E0C8B02840DE84007ED348 /* CoreDataViewModel.swift */; };
 		C3E0C8B72840E106007ED348 /* PicturesContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3E0C8B52840E106007ED348 /* PicturesContainer.xcdatamodeld */; };
+		C3E0C8B92840EFBB007ED348 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E0C8B82840EFBB007ED348 /* ImagePicker.swift */; };
+		C3E0C8BB28415A48007ED348 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E0C8BA28415A48007ED348 /* ImageHelper.swift */; };
+		C3E0C8BD28415C96007ED348 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E0C8BC28415C96007ED348 /* DetailView.swift */; };
+		C3E0C8BF28416399007ED348 /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E0C8BE28416399007ED348 /* LocationFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		C3E0C8AE2840DDED007ED348 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		C3E0C8B02840DE84007ED348 /* CoreDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
 		C3E0C8B62840E106007ED348 /* PicturesContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PicturesContainer.xcdatamodel; sourceTree = "<group>"; };
+		C3E0C8B82840EFBB007ED348 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C3E0C8BA28415A48007ED348 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		C3E0C8BC28415C96007ED348 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		C3E0C8BE28416399007ED348 /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,7 @@
 			children = (
 				C3E0C89328403F85007ED348 /* ContentView.swift */,
 				C3E0C8AE2840DDED007ED348 /* AddView.swift */,
+				C3E0C8BC28415C96007ED348 /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,6 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				C3E0C8AA28404674007ED348 /* FileManager-DocumentsDirectory.swift */,
+				C3E0C8B82840EFBB007ED348 /* ImagePicker.swift */,
+				C3E0C8BA28415A48007ED348 /* ImageHelper.swift */,
+				C3E0C8BE28416399007ED348 /* LocationFetcher.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -188,8 +200,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3E0C8B72840E106007ED348 /* PicturesContainer.xcdatamodeld in Sources */,
+				C3E0C8BB28415A48007ED348 /* ImageHelper.swift in Sources */,
+				C3E0C8BF28416399007ED348 /* LocationFetcher.swift in Sources */,
 				C3E0C8AB28404674007ED348 /* FileManager-DocumentsDirectory.swift in Sources */,
 				C3E0C8B12840DE84007ED348 /* CoreDataViewModel.swift in Sources */,
+				C3E0C8B92840EFBB007ED348 /* ImagePicker.swift in Sources */,
+				C3E0C8BD28415C96007ED348 /* DetailView.swift in Sources */,
 				C3E0C8AD284046D3007ED348 /* ContentViewModel.swift in Sources */,
 				C3E0C8AF2840DDED007ED348 /* AddView.swift in Sources */,
 				C3E0C89428403F85007ED348 /* ContentView.swift in Sources */,
@@ -326,6 +342,8 @@
 				DEVELOPMENT_TEAM = 2PWD73ANN2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We would like to use your camera to import photos";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We would like to know your location to tag your pictures on a map";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -356,6 +374,8 @@
 				DEVELOPMENT_TEAM = 2PWD73ANN2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We would like to use your camera to import photos";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We would like to know your location to tag your pictures on a map";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -3,6 +3,8 @@
     <entity name="PictureEntity" representedClassName="PictureEntity" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="imagepath" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
@@ -11,6 +13,6 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="PictureEntity" positionX="-45" positionY="0" width="128" height="74"/>
+        <element name="PictureEntity" positionX="-45" positionY="0" width="128" height="104"/>
     </elements>
 </model>
